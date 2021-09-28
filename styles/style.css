@@ -123,6 +123,60 @@
   font-weight: bold;
 }
 
+.digits {
+  font-family: 'Helvetica Neue', 'Arial', sans-serif; 
+  margin: 100px auto 0px;
+}
+
+.digits__section-title {
+  width: 80%;
+  margin: 100px auto 0px;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.digits__section-subtitle {
+  margin: 20px auto 0px;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.table {
+  width: 1100px;
+  margin: 60px auto 100px;
+}
+
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  align-items: flex-start;
+}
+
+.table__text_span {
+  padding-top: 20px;
+}
+
+.table__cell {
+  width: 250px;
+}
+
+.table__cell_heading {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.table__cell_text {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
