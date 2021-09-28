@@ -17,6 +17,7 @@
   display: flex;
   align-items: center;
   background-color: #f2f2f2;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif; 
 }
 
 .logo {
@@ -39,6 +40,7 @@
   font-size: 102px;
   line-height: 96px;
   font-weight: bold;
+  margin-left: 64px;
 }
 
 .header__subtitle {
@@ -76,6 +78,49 @@
   right: 0;
   top: 64px;
   z-index: 0;
+}
+
+.description {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif; 
+}
+
+.two-columns {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.two-columns__brief {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: normal;
+  width:  175px;
+  color:  #2f80ed;
+}
+
+.two-columns__main-text {
+  width: 80%; 
+  min-width: 784px
+}
+
+.two-columns__paragraph {
+  margin-bottom: 30px;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: normal;
+}
+
+.two-columns__paragraph:last-of-type {
+  margin-bottom: 0px;
+}
+
+.span-accent {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: bold;
 }
 
 /* и элемента с модификатором вида ключ-значение */
