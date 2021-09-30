@@ -37,7 +37,7 @@
 }
 
 .header__title{
-  width: 730px; 
+  width: 730px;
   height: 64px;
   display: flex;
   align-items: center;
@@ -139,7 +139,7 @@
 }
 
 .digits {
-  font-family: 'Helvetica Neue', 'Arial', sans-serif; 
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
   margin: 100px auto;
 }
 
@@ -279,11 +279,6 @@
   z-index: 0;
   /* margin-bottom: 0; */
   /* padding-bottom: 90px; */
-}
-
-.footer__columns {
-  width: 90%;
-  /* margin: 60px auto 40px; */
 }
 
 .footer {
