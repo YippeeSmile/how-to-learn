@@ -9,15 +9,20 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
+.block{
+  border: 1px solid red;
+}
+
 .header {
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
   /* выше установили ограничения для секции */
   display: flex;
+  position: relative;
   align-items: center;
   background-color: #f2f2f2;
-  font-family: 'Helvetica Neue', 'Arial', sans-serif; 
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 .logo {
@@ -32,7 +37,7 @@
 }
 
 .header__title{
-  width: 730px;
+  width: 730px; 
   height: 64px;
   display: flex;
   align-items: center;
@@ -57,11 +62,11 @@
 .header__main-illustration {
   width: 765px;
   height: 608px;
- background-color: transparent;
- position: absolute;
- bottom: 0;
- right: 0;
- z-index: 1;
+  background-color: transparent;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
 }
 
 .header__link {
@@ -88,27 +93,31 @@
 .description {
   margin-top: 100px;
   margin-bottom: 100px;
-  font-family: 'Helvetica Neue', 'Arial', sans-serif; 
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 .two-columns {
   width: 80%;
+  min-width: 784px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   margin: 0 auto;
 }
 
 .two-columns__brief {
+  width:  175px;
   font-size: 18px;
   line-height: 1.2;
   font-weight: normal;
-  width:  175px;
   color:  #2f80ed;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 .two-columns__main-text {
-  width: 80%;
   min-width: 784px;
+  width: 80%;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 .two-columns__paragraph {
@@ -116,6 +125,7 @@
   font-size: 24px;
   line-height: 34px;
   font-weight: normal;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 .two-columns__paragraph:last-of-type {
@@ -129,21 +139,19 @@
 }
 
 .digits {
-  font-family: 'Helvetica Neue', 'Arial', sans-serif;
-  margin: 100px auto 0px;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif; 
+  margin: 100px auto;
 }
 
 .digits__section-title {
-  width: 80%;
-  margin: 100px auto 0px;
   line-height: 1.15;
   font-size: 60px;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .digits__section-subtitle {
-  margin: 20px auto 0px;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
@@ -152,7 +160,7 @@
 
 .table {
   width: 1100px;
-  margin: 60px auto 0px;
+  margin: 60px auto;
 }
 
 .table-row {
@@ -174,12 +182,15 @@
   line-height: 1.15;
   font-size: 24px;
   font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 .table__cell_text {
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 .feynman {
@@ -214,9 +225,11 @@
   position: absolute;
   top: 50%;
   right: 48px;
+  text-decoration: none;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-.feynman_image {
+.feynman__image {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -232,6 +245,7 @@
   margin-right: 0;
   /* margin-top: 80px; */
   z-index: 2;
+ /* margin: 80px auto 90px;*/
 }
 
 .kaufman {
@@ -263,7 +277,13 @@
   right: -210px;
   top: 0;
   z-index: 0;
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
+  /* padding-bottom: 90px; */
+}
+
+.footer__columns {
+  width: 90%;
+  /* margin: 60px auto 40px; */
 }
 
 .footer {
@@ -274,8 +294,10 @@
   flex-basis: 711px;
 }
 
-.footer__columns_content-copyright {
- padding-top: 60px;
+.footer__column_content-copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .logo-place-footer {
@@ -285,9 +307,11 @@
 
 .footer__columns {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 90%;
-  margin: 0px auto 40px;
+  /* align-items: center; */
+  flex-basis: 711px;
+  padding-top: 60px;
 }
 
 .footer__author {
@@ -303,27 +327,30 @@
   font-weight: bold;
 }
 
-.footer__column_content {
- /* flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;*/
-  text-align: left;
-}
-
 .footer__column-links {
   list-style-type: none;
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
-}
-
-.footer__column-links:first-of-type {
-  margin-top: 20px;
-}
-
-.column-link {
   text-decoration: none;
+  padding-left: 0;
+}
+
+.footer_theme_dark {
+  color: white;
+}
+
+.footer__column-link {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.footer__column-link:first-of-type {
   margin-top: 20px;
+}
+
+.footer__column-link:last-of-type {
+  margin-bottom: 16px;
 }
 
 .footer__social-icon {
