@@ -64,6 +64,7 @@
   bottom: 0;
   right: 0;
   z-index: 1;
+  object-fit: cover;
 }
 
 .header__link {
@@ -98,7 +99,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  min-width: 784px;
   margin: 0 auto;
 }
 
@@ -109,6 +109,7 @@
   font-weight: normal;
   color:  #2f80ed;
   font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  margin: 0;
 }
 
 .two-columns__main-text {
@@ -123,6 +124,7 @@
   line-height: 34px;
   font-weight: normal;
   font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  margin: 0;
 }
 
 .two-columns__paragraph:last-of-type {
@@ -141,7 +143,7 @@
   margin: 100px auto;
 }
 
-.section__title {
+.digits__title {
   line-height: 1.15;
   font-size: 60px;
   font-weight: bold;
@@ -149,25 +151,13 @@
   margin: 0;
 }
 
-.section__subtitle {
+.digits__subtitle {
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
   text-align: center;
   margin: 0;
   padding-top: 20px;
-}
-
-.section__title_size-l {
-  font-size: 120px;
-  width: 648px;
-  margin: 0 auto;
-}
-
-.section__subtitle_size-l {
-  line-height: 51px;
-  font-size: 36px;
-  padding-top: 70px;
 }
 
 .table {
@@ -178,20 +168,10 @@
   justify-content: space-between;
 }
 
-.table__text_span {
-  display: block;
-  padding-top: 20px;
-}
-
 .table__cell {
   width: 250px;
   text-align: left;
   padding-top: 60px;
-}
-
-.table__cell_size-s {
-  width: 200px;
-  padding-top: 80px;
 }
 
 .table__heading {
@@ -199,7 +179,7 @@
   font-size: 24px;
   font-weight: bold;
   font-family: 'Helvetica Neue', 'Arial', sans-serif;
-  /* margin: 0; */
+  margin: 0;
 }
 
 .table__text {
@@ -208,6 +188,10 @@
   font-weight: normal;
   font-family: 'Helvetica Neue', 'Arial', sans-serif;
   margin: 0;
+}
+
+.table__cell .table__text:nth-child(3) {
+  padding-top: 20px;
 }
 
 .feynman {
@@ -223,11 +207,12 @@
 }
 
 .feynman__title {
-  width: 648px;
-  text-align: center;
   line-height: 1.15;
-  font-size: 120px;
   font-weight: bold;
+  text-align: center;
+  font-size: 120px;
+  width: 648px;
+  margin: 0 auto;
 }
 
 .feynman__subtitle {
@@ -237,7 +222,6 @@
   font-size: 36px;
   font-weight: normal;
   z-index: 0;
-  padding-top: 20px;
 }
 
 .feynman__link {
@@ -247,6 +231,9 @@
   text-decoration: none;
   color: #2f80ed;
   font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
 }
 
 /* и элемента с модификатором вида ключ-значение */
@@ -257,10 +244,37 @@
 
 .kaufman {
   background-color: #1f1f1f;
+  z-index: -1;
   position: relative;
   overflow: hidden;
   padding-top: 90px;
   padding-bottom: 90px;
+}
+
+.kaufman_theme_dark {
+  color: white;
+}
+
+.kaufman__title {
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+.kaufman__subtitle {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.table__cell_size-s {
+  width: 200px;
+  padding-top: 80px;
 }
 
 .kaufman__triangle {
@@ -271,6 +285,7 @@
   position: absolute;
   right: -210px;
   top: 0;
+  z-index: -1;
 }
 
 .footer {
@@ -283,18 +298,8 @@
   padding-bottom: 40px;
   justify-content: center;
   align-items: stretch;
-}
-
-.footer__column_content-copyright {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-basis: 711px;
-}
-
-.logo_place_footer {
-  width: 183px;
-  height: 35px;
+  color: white;
+  box-sizing: border-box;
 }
 
 .footer__columns {
@@ -303,34 +308,56 @@
   width: 90%;
 }
 
-.footer__author {
-  margin: 0;
+.footer__column {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.footer__column_content_copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 711px;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
-  align-items: flex-end;
-  padding: 18px auto;
+  margin-top: 0;
 }
 
-.footer__heading {
-  margin: 0;
+.footer__column_content_info {
   line-height: 30px;
   font-size: 18px;
   font-weight: bold;
   margin-top: 0;
 }
 
-.footer__column-links {
-  list-style-type: none;
+.footer__column_content_social {
   line-height: 30px;
   font-size: 18px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.logo_place_footer {
+  width: 183px;
+  height: 35px;
+}
+
+.footer__author {
+  padding: 18px auto;
+}
+
+.footer__column-heading {
+  margin: 0;
+}
+
+.footer__column-links {
+  list-style-type: none;
   font-weight: normal;
   text-decoration: none;
   padding-left: 0;
-}
-
-.footer_theme_dark {
-  color: white;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
 }
 
 .footer__column-link {
