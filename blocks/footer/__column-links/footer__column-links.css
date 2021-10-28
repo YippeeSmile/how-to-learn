@@ -6,12 +6,12 @@
     line-height: 30px;
     font-size: 18px;
     font-weight: normal;
-  }
+}
 
-  .footer__column-links:first-of-type {
+.footer__column-links:first-of-type {
     margin-top: 20px;
-  }
-  
-  .footer__column-links:last-of-type {
+}
+
+.footer__column-links:last-of-type {
     margin-bottom: 16px;
-  }
+}
