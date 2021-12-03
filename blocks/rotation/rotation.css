@@ -7,6 +7,6 @@
     }
 }
 
-.rotation {
+.rotation::before {
     animation: rotation 20s linear infinite;
 }
