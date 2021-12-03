@@ -2,11 +2,22 @@
     height: 100vh;
     min-height: 600px;
     max-height: 756px;
-    /* выше установили ограничения для секции */
     display: flex;
     position: relative;
     align-items: center;
     background-color: #f2f2f2;
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
     overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    height: 568px;
+    width: 568px;
+    background-color: #2F80ED;
+    position: absolute;
+    right: 0;
+    top: 64px;
+    z-index: 0;
+    box-sizing: border-box;
 }
