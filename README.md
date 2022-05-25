@@ -1,6 +1,6 @@
 # how-to-learn
 
-##[ССылка на проект](https://yippeesmile.github.io/how-to-learn/)
+##[Ссылка на проект](https://yippeesmile.github.io/how-to-learn/)
 
 Работа с анимациями, шрифтами и фреймами.
 
